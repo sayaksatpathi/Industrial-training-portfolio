@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayak's Internship Portfolio – IT Service Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-brand" onclick="navigate('home');return false;">
+      <div class="brand-icon"><i class="fa-solid fa-cube"></i></div>
+      <span class="brand-text">Sayak's <span class="highlight">Portfolio</span></span>
+    </a>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="#" class="nav-link active" data-page="home" onclick="navigate('home');return false;"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#" class="nav-link" data-page="services" onclick="navigate('services');return false;"><i class="fa-solid fa-layer-group"></i> Services</a>
+      <a href="#" class="nav-link" data-page="projects" onclick="navigate('projects');return false;"><i class="fa-solid fa-briefcase"></i> Projects</a>
+      <a href="#" class="nav-link" data-page="request" onclick="navigate('request');return false;"><i class="fa-solid fa-paper-plane"></i> Service Request</a>
+      <a href="#" class="nav-link" data-page="contact" onclick="navigate('contact');return false;"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <a href="#" class="nav-link admin-btn" data-page="admin" onclick="navigate('admin');return false;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeBtn" title="Toggle Theme"><i class="fa-solid fa-sun" id="themeIcon"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="main-content">
+
+  <!-- ========== HOME ========== -->
+  <section id="page-home" class="page-section active">
+    <div class="hero-section">
+      <div class="hero-content">
+        <a href="#" class="badge-pill clickable-pill" onclick="navigate('services');return false;">
+          <i class="fa-solid fa-sparkles"></i> Enterprise IT Solutions <i class="fa-solid fa-arrow-right pill-arrow"></i>
+        </a>
+        <h1 class="hero-title">
+          <span class="clickable-keyword" onclick="navigate('services')">IT Service Portal</span>
+          <span class="gradient-text"> Industrial</span>
+          <span class="clickable-keyword" onclick="navigate('services')"> Presentation</span>
+        </h1>
+        <p class="hero-subtitle">
+          A comprehensive <span class="text-highlight clickable-keyword" onclick="navigate('request')">Full-Stack Application</span> built by
+          <strong>Sayak Satpathi</strong> to demonstrate
+          <span class="text-highlight clickable-keyword" onclick="navigate('request')">Enterprise Architecture</span> and
+          <span class="text-highlight clickable-keyword" onclick="navigate('contact')">IT Service Management</span> during the internship.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="navigate('request')"><i class="fa-solid fa-paper-plane"></i> Request Service</button>
+          <button class="btn btn-outline btn-lg" onclick="navigate('projects')"><i class="fa-solid fa-briefcase"></i> View Portfolio</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Counter Banner -->
+    <div class="counter-banner">
+      <div class="counter-item clickable-card" onclick="navigate('admin')">
+        <h3 class="counter-val" id="count-requests">0</h3>
+        <p class="counter-label"><i class="fa-solid fa-inbox"></i> Active Requests</p>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item clickable-card" onclick="navigate('services')">
+        <h3 class="counter-val" id="count-services">0</h3>
+        <p class="counter-label"><i class="fa-solid fa-layer-group"></i> Core IT Services</p>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item clickable-card" onclick="navigate('projects')">
+        <h3 class="counter-val" id="count-projects">0</h3>
+        <p class="counter-label"><i class="fa-solid fa-briefcase"></i> Completed Projects</p>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item clickable-card" onclick="navigate('contact')">
+        <h3 class="counter-val">99.9%</h3>
+        <p class="counter-label"><i class="fa-solid fa-star"></i> Client Satisfaction</p>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section-container">
+      <div class="section-header center">
+        <h2 class="section-title">About This Project</h2>
+        <p class="section-subtitle">Showcasing proficiency in modern web development, UI/UX design, and JavaScript architecture.</p>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-card clickable-card" onclick="navigate('services')">
+          <div class="intro-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Full-Stack Development</h3>
+          <p>HTML, CSS, JavaScript frontend with Node.js & Express backend — all connected via REST APIs.</p>
+          <div class="card-action-text">Explore Services <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="intro-card clickable-card" onclick="navigate('admin')">
+          <div class="intro-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Admin Dashboard</h3>
+          <p>Live CRUD operations — create, read, update, and delete service requests and track their statuses.</p>
+          <div class="card-action-text">View Dashboard <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="intro-card clickable-card" onclick="navigate('request')">
+          <div class="intro-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Data Persistence</h3>
+          <p>All data persists using the browser's LocalStorage — no server required for this demo version.</p>
+          <div class="card-action-text">Submit Request <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner clickable-card" onclick="navigate('request')">
+      <div class="cta-content">
+        <h2>Ready to Launch Your Next IT Project?</h2>
+        <p>Submit your requirements in less than 2 minutes. Our engineering team will review and get back within 24 hours.</p>
+        <button class="btn btn-light btn-lg" onclick="event.stopPropagation();navigate('request')"><i class="fa-solid fa-paper-plane"></i> Submit Service Request</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="page-services" class="page-section">
+    <div class="page-header">
+      <h1 class="page-title">Our IT Services</h1>
+      <p class="page-description">Comprehensive technology solutions designed to scale your operations and power digital transformation.</p>
+    </div>
+    <div class="section-container">
+      <div class="grid grid-3" id="services-list-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="page-projects" class="page-section">
+    <div class="page-header">
+      <h1 class="page-title">Projects & Portfolio</h1>
+      <p class="page-description">A display of custom software applications and web platforms built for our clients.</p>
+    </div>
+    <div class="section-container">
+      <div class="grid grid-3" id="projects-list-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE REQUEST ========== -->
+  <section id="page-request" class="page-section">
+    <div class="page-header">
+      <h1 class="page-title">Submit a Service Request</h1>
+      <p class="page-description">Fill out your project specifications below. Our technical leads will analyze your requirements.</p>
+    </div>
+    <div class="section-container">
+      <div class="form-wrapper">
+        <form id="requestForm" class="request-form" onsubmit="submitRequest(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label"><i class="fa-solid fa-user"></i> Full Name <span class="required">*</span></label>
+              <input type="text" id="reqName" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label"><i class="fa-solid fa-envelope"></i> Email Address <span class="required">*</span></label>
+              <input type="email" id="reqEmail" class="form-input" placeholder="e.g. rahul@example.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label"><i class="fa-solid fa-phone"></i> Phone Number</label>
+              <input type="tel" id="reqPhone" class="form-input" placeholder="e.g. +91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label class="form-label"><i class="fa-solid fa-list-check"></i> Service Required <span class="required">*</span></label>
+              <select id="reqService" class="form-select" required>
+                <option value="" disabled selected>Select an IT Service</option>
+                <option value="Web Development">Web Development</option>
+                <option value="App Development">App Development</option>
+                <option value="Cloud Services">Cloud Services</option>
+                <option value="Software Development">Software Development</option>
+                <option value="Cybersecurity & Audit">Cybersecurity & Audit</option>
+                <option value="IT Support & Consulting">IT Support & Consulting</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label"><i class="fa-solid fa-file-lines"></i> Project Description <span class="required">*</span></label>
+              <textarea id="reqDesc" class="form-textarea" rows="5" placeholder="Describe scope, features, timeline..." required></textarea>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary btn-lg"><i class="fa-solid fa-paper-plane"></i> Submit Request</button>
+          </div>
+        </form>
+
+        <div class="form-side-card">
+          <div class="side-card-header"><i class="fa-solid fa-clock-rotate-left"></i> What Happens Next?</div>
+          <ul class="steps-list">
+            <li class="clickable-card" onclick="navigate('admin')">
+              <span class="step-num">1</span>
+              <div><strong>Request Logged</strong><p>Your request is saved with <code>Pending</code> status.</p></div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div><strong>Technical Review</strong><p>Our solutions architect evaluates requirements.</p></div>
+            </li>
+            <li class="clickable-card" onclick="navigate('contact')">
+              <span class="step-num">3</span>
+              <div><strong>Status Update</strong><p>We update status to <code>In Progress</code> and email your proposal.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="page-contact" class="page-section">
+    <div class="page-header">
+      <h1 class="page-title">Contact & Location</h1>
+      <p class="page-description">Have a question or want to discuss enterprise consulting? Get in touch directly.</p>
+    </div>
+    <div class="section-container">
+      <div class="contact-layout">
+        <div class="contact-info-card">
+          <h2 class="card-title"><i class="fa-solid fa-building-user"></i> Get in Touch</h2>
+          <p class="card-desc">Reach out via phone, email, or visit our headquarters.</p>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div><strong>Address</strong><p>NexusIT Tech Park, Building 4B, Cyber City, Gurugram – 122002</p></div>
+          </div>
+          <a href="mailto:sayaksatpathi@example.com" class="info-item clickable-info">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><strong>Email Address</strong><p>sayaksatpathi@example.com</p></div>
+          </a>
+          <a href="tel:+919876543210" class="info-item clickable-info">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div><strong>Phone Line</strong><p>+91 98765 43210</p></div>
+          </a>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div><strong>Business Hours</strong><p>Monday – Friday: 9:00 AM – 7:00 PM IST</p></div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h2 class="card-title"><i class="fa-solid fa-paper-plane"></i> Send a Message</h2>
+          <form onsubmit="submitContact(event)">
+            <div class="form-group">
+              <label class="form-label">Your Name <span class="required">*</span></label>
+              <input type="text" id="ctxName" class="form-input" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Email <span class="required">*</span></label>
+              <input type="email" id="ctxEmail" class="form-input" placeholder="Your email address" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message <span class="required">*</span></label>
+              <textarea id="ctxMsg" class="form-textarea" rows="4" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ADMIN DASHBOARD ========== -->
+  <section id="page-admin" class="page-section">
+    <div class="admin-header-bar">
+      <div>
+        <h1 class="page-title"><i class="fa-solid fa-gauge-high"></i> ADMIN DASHBOARD</h1>
+        <p class="page-description">Real-time IT Request Tracking & CRUD Management</p>
+      </div>
+    </div>
+
+    <div class="admin-stats-grid">
+      <div class="stat-card clickable-card">
+        <div class="stat-icon req-bg"><i class="fa-solid fa-inbox"></i></div>
+        <div class="stat-info">
+          <p class="stat-title">Requests</p>
+          <h2 class="stat-value" id="admin-req-count">0</h2>
+        </div>
+        <span class="stat-badge badge-pending" id="admin-pending-count">0 Pending</span>
+      </div>
+      <div class="stat-card clickable-card">
+        <div class="stat-icon srv-bg"><i class="fa-solid fa-server"></i></div>
+        <div class="stat-info">
+          <p class="stat-title">Services</p>
+          <h2 class="stat-value" id="admin-srv-count">0</h2>
+        </div>
+        <span class="stat-badge badge-active">Active Catalog</span>
+      </div>
+      <div class="stat-card clickable-card">
+        <div class="stat-icon proj-bg"><i class="fa-solid fa-diagram-project"></i></div>
+        <div class="stat-info">
+          <p class="stat-title">Projects</p>
+          <h2 class="stat-value" id="admin-proj-count">0</h2>
+        </div>
+        <span class="stat-badge badge-completed">Portfolio</span>
+      </div>
+    </div>
+
+    <div class="admin-tab-content active">
+      <div class="table-card">
+        <div class="table-header">
+          <h3>Recent Service Requests</h3>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email & Phone</th>
+                <th>Service Required</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-requests-tbody">
+              <tr><td colspan="6" style="text-align:center;color:var(--text-secondary);padding:2rem">No requests yet. <a href="#" onclick="navigate('request');return false;" style="color:var(--accent-blue)">Submit one!</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:0.75rem">
+        <div class="brand-icon"><i class="fa-solid fa-cube"></i></div>
+        <span class="brand-text">Sayak's <span class="highlight">Portfolio</span></span>
+      </div>
+      <p style="margin-top:0.5rem">Industrial Presentation – IT Service Request & Portfolio Management System.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#" onclick="navigate('home');return false;">Home</a>
+      <a href="#" onclick="navigate('services');return false;">Services</a>
+      <a href="#" onclick="navigate('projects');return false;">Projects</a>
+      <a href="#" onclick="navigate('request');return false;">Service Request</a>
+      <a href="#" onclick="navigate('contact');return false;">Contact</a>
+      <a href="#" onclick="navigate('admin');return false;">Admin Dashboard</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Sayak Satpathi. All rights reserved.</div>
+  </div>
+</footer>
+
+<div id="toast-container" class="toast-container"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
